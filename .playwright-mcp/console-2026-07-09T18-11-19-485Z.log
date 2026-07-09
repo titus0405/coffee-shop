@@ -1,0 +1,5 @@
+[    3613ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.1 @ https://coffee-shop-delta-nine.vercel.app/static/js/jquery-migrate-3.0.1.min.js:47
+[    8723ms] [LOG] 100 @ https://coffee-shop-delta-nine.vercel.app/static/js/main.js:180
+[    8724ms] [LOG] 85 @ https://coffee-shop-delta-nine.vercel.app/static/js/main.js:180
+[    8724ms] [LOG] 10567 @ https://coffee-shop-delta-nine.vercel.app/static/js/main.js:180
+[    8724ms] [LOG] 900 @ https://coffee-shop-delta-nine.vercel.app/static/js/main.js:180

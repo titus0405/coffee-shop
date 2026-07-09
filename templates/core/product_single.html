@@ -30,7 +30,7 @@
       </div>
       <div class="col-lg-6 product-details pl-md-5 ftco-animate">
         <h3>{{ product.name }}</h3>
-        <p class="price"><span>Rp{{ product.price }}</span></p>
+        <p class="price"><span>Rp.{{ product.price }}</span></p>
         <p>{{ product.description }}</p>
         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 
@@ -102,7 +102,7 @@
             <div class="text text-center pt-4">
               <h3><a href="{% url 'product_single' related.id %}">{{ related.name }}</a></h3>
               <p>{{ related.description }}</p>
-              <p class="price"><span>Rp{{ related.price }}</span></p>
+              <p class="price"><span>Rp.{{ related.price }}</span></p>
               <p><a href="{% url 'product_single' related.id %}" class="btn btn-primary btn-outline-primary">Show</a></p>
             </div>
           </div>
