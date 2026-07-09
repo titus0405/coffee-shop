@@ -177,7 +177,7 @@ def cart_view(request):
 
     subtotal = 0
     for item in cart_items:
-        item_total = float(item.price) * item.quantity
+        item_total = float(item.price.replace('.', '')) * item.quantity
         item.total_price = item_total
         subtotal += item_total
 
@@ -201,7 +201,7 @@ def checkout(request):
     user_id = request.session['user_id']
     cart_items = Cart.objects.filter(user_id=user_id)
 
-    subtotal = sum(float(item.price) * item.quantity for item in cart_items)
+    subtotal = sum(float(item.price.replace('.', '')) * item.quantity for item in cart_items)
     delivery = 5.00
     discount = 3.00
     total = subtotal + delivery - discount
