@@ -1,0 +1,50 @@
+{% extends 'admin/base_admin.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="home-tab">
+          <h2>Create Product</h2>
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+          <form action="{% url 'create_product' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input type="number" step="0.01" class="form-control" name="price" required>
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" name="category">
+                <option value="Coffee">Coffee</option>
+                <option value="Drinks">Drinks</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Main Dish">Main Dish</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea class="form-control" name="description" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label>Image</label>
+              <input type="file" class="form-control" name="image">
+            </div>
+            <button type="submit" class="btn btn-primary text-white">Create</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

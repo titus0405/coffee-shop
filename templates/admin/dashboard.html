@@ -1,0 +1,54 @@
+{% extends 'admin/base_admin.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="home-tab">
+          <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+            <div>
+              <h2>Admin Dashboard</h2>
+            </div>
+          </div>
+          <div class="tab-content tab-content-basic">
+            <div class="tab-pane fade show active" id="overview" role="tabpanel">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="statistics-details d-flex align-items-center justify-content-between">
+                    <div>
+                      <p class="statistics-title">Total Admins</p>
+                      <h3 class="rate-percentage">{{ total_admins }}</h3>
+                    </div>
+                    <div>
+                      <p class="statistics-title">Total Products</p>
+                      <h3 class="rate-percentage">{{ total_products }}</h3>
+                    </div>
+                    <div>
+                      <p class="statistics-title">Total Orders</p>
+                      <h3 class="rate-percentage">{{ total_orders }}</h3>
+                    </div>
+                    <div>
+                      <p class="statistics-title">Total Bookings</p>
+                      <h3 class="rate-percentage">{{ total_bookings }}</h3>
+                    </div>
+                    <div>
+                      <p class="statistics-title">Total Users</p>
+                      <h3 class="rate-percentage">{{ total_users }}</h3>
+                    </div>
+                    <div>
+                      <p class="statistics-title">Total Cart Items</p>
+                      <h3 class="rate-percentage">{{ total_cart_items }}</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

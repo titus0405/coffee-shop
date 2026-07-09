@@ -1,0 +1,46 @@
+{% extends 'admin/base_admin.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="home-tab">
+          <h2>Bookings List</h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Phone</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for booking in bookings %}
+              <tr>
+                <td>{{ booking.id }}</td>
+                <td>{{ booking.first_name }}</td>
+                <td>{{ booking.last_name }}</td>
+                <td>{{ booking.date }}</td>
+                <td>{{ booking.time }}</td>
+                <td>{{ booking.phone }}</td>
+                <td>{{ booking.message }}</td>
+              </tr>
+              {% empty %}
+              <tr>
+                <td colspan="7" class="text-center">No bookings.</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - N.S Coffee</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-page">
+    <div class="form">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+      <form class="login-form" action="{% url 'admin_login' %}" method="post">
+        {% csrf_token %}
+        <h2>N.S Coffee</h2>
+        <h4>Administrator Login</h4>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

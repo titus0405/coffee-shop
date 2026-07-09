@@ -1,0 +1,116 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="home-slider owl-carousel">
+  <div class="slider-item" style="background-image: url({% static 'images/bg_3.jpg' %})" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row slider-text justify-content-center align-items-center">
+        <div class="col-md-7 col-sm-12 text-center ftco-animate">
+          <h1 class="mb-3 mt-5 bread">Product Detail</h1>
+          <p class="breadcrumbs">
+            <span class="mr-2"><a href="{% url 'index' %}">Home</a></span>
+            <span>Product Detail</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-5 ftco-animate">
+        <a href="{% static product.image %}" class="image-popup">
+          <img src="{% static product.image %}" class="img-fluid" alt="{{ product.name }}">
+        </a>
+      </div>
+      <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+        <h3>{{ product.name }}</h3>
+        <p class="price"><span>${{ product.price }}</span></p>
+        <p>{{ product.description }}</p>
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+        {% if request.session.user_id %}
+          <form action="{% url 'product_single' product.id %}" method="post">
+            {% csrf_token %}
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <div class="form-group d-flex">
+                  <div class="select-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="size" class="form-control">
+                      <option value="Small">Small</option>
+                      <option value="Medium" selected>Medium</option>
+                      <option value="Large">Large</option>
+                      <option value="Extra Large">Extra Large</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <div class="input-group col-md-6 d-flex mb-3">
+                <span class="input-group-btn mr-2">
+                  <button type="button" class="quantity-left-minus btn" data-type="minus" data-field="">
+                    <i class="icon-minus"></i>
+                  </button>
+                </span>
+                <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+                <span class="input-group-btn ml-2">
+                  <button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
+                    <i class="icon-plus"></i>
+                  </button>
+                </span>
+              </div>
+            </div>
+            <input hidden type="text" name="name" value="{{ product.name }}">
+            <input hidden type="text" name="image" value="{{ product.image }}">
+            <input hidden type="text" name="description" value="{{ product.description }}">
+            <input hidden type="text" name="price" value="{{ product.price }}">
+            {% if in_cart %}
+              <button class="btn btn-primary py-3 px-4" name="submit" type="submit" disabled>Added to cart</button>
+            {% else %}
+              <button class="btn btn-primary py-3 px-4" name="submit" type="submit">Add to cart</button>
+            {% endif %}
+          </form>
+        {% else %}
+          <a href="{% url 'login' %}" class="btn btn-primary py-3 px-4">Login to Add to cart</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if related_products %}
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <span class="subheading">Discover</span>
+        <h2 class="mb-4">Related products</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+    <div class="row">
+      {% for related in related_products %}
+        <div class="col-md-3">
+          <div class="menu-entry">
+            <a href="{% url 'product_single' related.id %}" class="img" style="background-image: url({% static related.image %});"></a>
+            <div class="text text-center pt-4">
+              <h3><a href="{% url 'product_single' related.id %}">{{ related.name }}</a></h3>
+              <p>{{ related.description }}</p>
+              <p class="price"><span>${{ related.price }}</span></p>
+              <p><a href="{% url 'product_single' related.id %}" class="btn btn-primary btn-outline-primary">Show</a></p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin - N.S Coffee</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <div class="container-scroller">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'admin_dashboard' %}">N.S Coffee Admin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="adminNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'admins_list' %}">Admins</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_products' %}">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'bookings_list' %}">Bookings</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'orders_list' %}">Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'users_list' %}">Users</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">View Site</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'admin_logout' %}">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+          </div>
+        {% endfor %}
+      {% endif %}
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>
