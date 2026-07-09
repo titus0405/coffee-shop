@@ -54,13 +54,13 @@
                     <h3>{{ item.name }}</h3>
                     <p>{{ item.description }}</p>
                   </td>
-                  <td class="price">${{ item.price }}</td>
+                  <td class="price">Rp{{ item.price }}</td>
                   <td>
                     <div class="input-group mb-3">
                       <input disabled type="text" name="quantity" class="quantity form-control input-number" value="{{ item.quantity }}" min="1" max="100">
                     </div>
                   </td>
-                  <td class="total">${{ item.total_price }}</td>
+                  <td class="total">Rp{{ item.total_price }}</td>
                 </tr>
               {% empty %}
                 <tr>
@@ -78,20 +78,20 @@
           <h3>Cart Totals</h3>
           <p class="d-flex">
             <span>Subtotal</span>
-            <span>${{ subtotal|floatformat:2 }}</span>
+            <span>Rp{{ subtotal|floatformat:2 }}</span>
           </p>
           <p class="d-flex">
             <span>Delivery</span>
-            <span>${{ delivery|floatformat:2 }}</span>
+            <span>Rp{{ delivery|floatformat:2 }}</span>
           </p>
           <p class="d-flex">
             <span>Discount</span>
-            <span>${{ discount|floatformat:2 }}</span>
+            <span>Rp{{ discount|floatformat:2 }}</span>
           </p>
           <hr>
           <p class="d-flex total-price">
             <span>Total</span>
-            <span>${{ total|floatformat:2 }}</span>
+            <span>Rp{{ total|floatformat:2 }}</span>
           </p>
         </div>
         {% if cart_items %}

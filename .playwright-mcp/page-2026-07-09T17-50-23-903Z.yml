@@ -1,0 +1,272 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "N.S Coffee Delicious Taste" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - text: N.S Coffee
+        - generic [ref=e5]: Delicious Taste
+      - text: 
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "Menu" [ref=e11] [cursor=pointer]:
+            - /url: /menu/
+        - listitem [ref=e12]:
+          - link "Services" [ref=e13] [cursor=pointer]:
+            - /url: /services/
+        - listitem [ref=e14]:
+          - link "About" [ref=e15] [cursor=pointer]:
+            - /url: /about/
+        - listitem [ref=e16]:
+          - link "Contact" [ref=e17] [cursor=pointer]:
+            - /url: /contact/
+        - listitem [ref=e18]:
+          - link "login" [ref=e19] [cursor=pointer]:
+            - /url: /login/
+        - listitem [ref=e20]:
+          - link "register" [ref=e21] [cursor=pointer]:
+            - /url: /register/
+  - generic [ref=e22]:
+    - generic [ref=e24]:
+      - generic [ref=e30]:
+        - text: Welcome
+        - heading "Amazing Taste & Beautiful Place" [level=1] [ref=e31]
+        - paragraph [ref=e32]: A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        - paragraph [ref=e33]:
+          - link "Order Now" [ref=e34] [cursor=pointer]:
+            - /url: /login/
+          - link "View Menu" [ref=e35] [cursor=pointer]:
+            - /url: /menu/
+      - generic [ref=e41]:
+        - text: Welcome
+        - heading "Creamy Hot and Ready to Serve" [level=1] [ref=e42]
+        - paragraph [ref=e43]: A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        - paragraph [ref=e44]:
+          - link "Order Now" [ref=e45] [cursor=pointer]:
+            - /url: /login/
+          - link "View Menu" [ref=e46] [cursor=pointer]:
+            - /url: /menu/
+      - generic [ref=e52]:
+        - text: Welcome
+        - heading "The Best Coffee Testing Experience" [level=1] [ref=e53]
+        - paragraph [ref=e54]: A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        - paragraph [ref=e55]:
+          - link "Order Now" [ref=e56] [cursor=pointer]:
+            - /url: /login/
+          - link "View Menu" [ref=e57] [cursor=pointer]:
+            - /url: /menu/
+      - generic [ref=e63]:
+        - text: Welcome
+        - heading "Amazing Taste & Beautiful Place" [level=1] [ref=e64]
+        - paragraph [ref=e65]: A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        - paragraph [ref=e66]:
+          - link "Order Now" [ref=e67] [cursor=pointer]:
+            - /url: /login/
+          - link "View Menu" [ref=e68] [cursor=pointer]:
+            - /url: /menu/
+      - generic [ref=e74]:
+        - text: Welcome
+        - heading "Creamy Hot and Ready to Serve" [level=1] [ref=e75]
+        - paragraph [ref=e76]: A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        - paragraph [ref=e77]:
+          - link "Order Now" [ref=e78] [cursor=pointer]:
+            - /url: /login/
+          - link "View Menu" [ref=e79] [cursor=pointer]:
+            - /url: /menu/
+      - generic [ref=e85]:
+        - text: Welcome
+        - heading "The Best Coffee Testing Experience" [level=1] [ref=e86]
+        - paragraph [ref=e87]: A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        - paragraph [ref=e88]:
+          - link "Order Now" [ref=e89] [cursor=pointer]:
+            - /url: /login/
+          - link "View Menu" [ref=e90] [cursor=pointer]:
+            - /url: /menu/
+      - generic [ref=e96]:
+        - text: Welcome
+        - heading "Amazing Taste & Beautiful Place" [level=1] [ref=e97]
+        - paragraph [ref=e98]: A small river named Duden flows by their place and supplies it with the necessary regelialia.
+        - paragraph [ref=e99]:
+          - link "Order Now" [ref=e100] [cursor=pointer]:
+            - /url: /login/
+          - link "View Menu" [ref=e101] [cursor=pointer]:
+            - /url: /menu/
+    - text: 
+    - generic [ref=e102]:
+      - button [ref=e103] [cursor=pointer]
+      - button [ref=e105] [cursor=pointer]
+      - button [ref=e107] [cursor=pointer]
+  - generic [ref=e111]:
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - generic [ref=e116]: 
+        - generic [ref=e117]:
+          - heading "000 (123) 456 7890" [level=3] [ref=e118]
+          - paragraph [ref=e119]: A small river named Duden flows by their place and supplies.
+      - generic [ref=e120]:
+        - generic [ref=e122]: 
+        - generic [ref=e123]:
+          - heading "198 West 21th Street" [level=3] [ref=e124]
+          - paragraph [ref=e125]: 203 Fake St. Mountain View, San Francisco, California, USA
+      - generic [ref=e126]:
+        - generic [ref=e128]: 
+        - generic [ref=e129]:
+          - heading "Open Monday-Friday" [level=3] [ref=e130]
+          - paragraph [ref=e131]: 8:00am - 9:00pm
+    - generic [ref=e132]:
+      - heading "Book a Table" [level=3] [ref=e133]
+      - paragraph [ref=e134]:
+        - link "Login to Book Table" [ref=e135] [cursor=pointer]:
+          - /url: /login/
+  - paragraph [ref=e141]: On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn't take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.
+  - generic [ref=e150]:
+    - link [ref=e153] [cursor=pointer]:
+      - /url: "#"
+    - link [ref=e156] [cursor=pointer]:
+      - /url: "#"
+    - link [ref=e159] [cursor=pointer]:
+      - /url: "#"
+    - link [ref=e162] [cursor=pointer]:
+      - /url: "#"
+  - generic [ref=e172]:
+    - generic [ref=e174]:
+      - link [ref=e175] [cursor=pointer]:
+        - /url: /product-single/1/
+      - generic [ref=e176]:
+        - heading "Americano" [level=3] [ref=e177]:
+          - link "Americano" [ref=e178] [cursor=pointer]:
+            - /url: /product-single/1/
+        - paragraph [ref=e179]: Classic Americano coffee
+        - paragraph [ref=e180]: $12.00
+        - paragraph [ref=e181]:
+          - link "Show" [ref=e182] [cursor=pointer]:
+            - /url: /product-single/1/
+    - generic [ref=e184]:
+      - link [ref=e185] [cursor=pointer]:
+        - /url: /product-single/2/
+      - generic [ref=e186]:
+        - heading "Cappuccino" [level=3] [ref=e187]:
+          - link "Cappuccino" [ref=e188] [cursor=pointer]:
+            - /url: /product-single/2/
+        - paragraph [ref=e189]: Rich cappuccino with foam
+        - paragraph [ref=e190]: $15.00
+        - paragraph [ref=e191]:
+          - link "Show" [ref=e192] [cursor=pointer]:
+            - /url: /product-single/2/
+    - generic [ref=e194]:
+      - link [ref=e195] [cursor=pointer]:
+        - /url: /product-single/3/
+      - generic [ref=e196]:
+        - heading "Espresso" [level=3] [ref=e197]:
+          - link "Espresso" [ref=e198] [cursor=pointer]:
+            - /url: /product-single/3/
+        - paragraph [ref=e199]: Strong espresso shot
+        - paragraph [ref=e200]: $10.00
+        - paragraph [ref=e201]:
+          - link "Show" [ref=e202] [cursor=pointer]:
+            - /url: /product-single/3/
+    - generic [ref=e204]:
+      - link [ref=e205] [cursor=pointer]:
+        - /url: /product-single/4/
+      - generic [ref=e206]:
+        - heading "Latte" [level=3] [ref=e207]:
+          - link "Latte" [ref=e208] [cursor=pointer]:
+            - /url: /product-single/4/
+        - paragraph [ref=e209]: Smooth latte with milk
+        - paragraph [ref=e210]: $14.00
+        - paragraph [ref=e211]:
+          - link "Show" [ref=e212] [cursor=pointer]:
+            - /url: /product-single/4/
+  - generic [ref=e221]:
+    - generic [ref=e223]:
+      - blockquote [ref=e224]:
+        - paragraph [ref=e225]: “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.”
+      - generic [ref=e228]:
+        - text: Louise Kelly
+        - generic [ref=e229]: Illustrator Designer
+    - generic [ref=e231]:
+      - blockquote [ref=e232]:
+        - paragraph [ref=e233]: “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however.”
+      - generic [ref=e236]:
+        - text: Louise Kelly
+        - generic [ref=e237]: Illustrator Designer
+  - contentinfo [ref=e238]:
+    - generic [ref=e239]:
+      - generic [ref=e240]:
+        - generic [ref=e242]:
+          - heading "About Us" [level=2] [ref=e243]
+          - paragraph [ref=e244]: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          - list [ref=e245]
+        - generic [ref=e247]:
+          - heading "Recent Blog" [level=2] [ref=e248]
+          - generic [ref=e251]:
+            - heading "Even the all-powerful Pointing has no control about" [level=3] [ref=e252]:
+              - link "Even the all-powerful Pointing has no control about" [ref=e253] [cursor=pointer]:
+                - /url: "#"
+            - generic [ref=e254]:
+              - link " Sept 15, 2023" [ref=e256] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e257]: 
+                - text: Sept 15, 2023
+              - link " Admin" [ref=e259] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e260]: 
+                - text: Admin
+              - link " 19" [ref=e262] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e263]: 
+                - text: "19"
+          - generic [ref=e266]:
+            - heading "Even the all-powerful Pointing has no control about" [level=3] [ref=e267]:
+              - link "Even the all-powerful Pointing has no control about" [ref=e268] [cursor=pointer]:
+                - /url: "#"
+            - generic [ref=e269]:
+              - link " Sept 15, 2023" [ref=e271] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e272]: 
+                - text: Sept 15, 2023
+              - link " Admin" [ref=e274] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e275]: 
+                - text: Admin
+              - link " 19" [ref=e277] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e278]: 
+                - text: "19"
+        - generic [ref=e280]:
+          - heading "Services" [level=2] [ref=e281]
+          - list [ref=e282]:
+            - listitem [ref=e283]:
+              - link "Cooked" [ref=e284] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e285]:
+              - link "Deliver" [ref=e286] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e287]:
+              - link "Quality Foods" [ref=e288] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e289]:
+              - link "Mixed" [ref=e290] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e292]:
+          - heading "Have a Questions?" [level=2] [ref=e293]
+          - list [ref=e295]:
+            - listitem [ref=e296]:
+              - generic [ref=e297]: 
+              - generic [ref=e298]: 203 Fake St. Mountain View, San Francisco, California, USA
+            - listitem [ref=e299]:
+              - link " +91 392 3929 210" [ref=e300] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e301]: 
+                - generic [ref=e302]: +91 392 3929 210
+            - listitem [ref=e303]:
+              - link " info@yourdomain.com" [ref=e304] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e305]: 
+                - generic [ref=e306]: info@yourdomain.com
+      - paragraph [ref=e309]:
+        - text: Copyright © 2024 All rights reserved | Made with
+        - generic [ref=e310]: 
+        - text: by Nikhil Singh
