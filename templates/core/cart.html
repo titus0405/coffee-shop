@@ -82,11 +82,11 @@
           </p>
           <p class="d-flex">
             <span>Delivery</span>
-            <span>Rp.{{ delivery|floatformat:2 }}</span>
+            <span><input type="number" name="delivery" form="cart-form" class="form-control" style="width:120px;height:35px;padding:0 8px;" value="0" min="0"></span>
           </p>
           <p class="d-flex">
             <span>Discount</span>
-            <span>Rp.{{ discount|floatformat:2 }}</span>
+            <span><input type="number" name="discount" form="cart-form" class="form-control" style="width:120px;height:35px;padding:0 8px;" value="0" min="0"></span>
           </p>
           <hr>
           <p class="d-flex total-price">
@@ -95,9 +95,8 @@
           </p>
         </div>
         {% if cart_items %}
-          <form action="{% url 'cart' %}" method="post">
+          <form id="cart-form" action="{% url 'cart' %}" method="post">
             {% csrf_token %}
-            <input hidden name="price_total" type="text" value="{{ total }}">
             <button class="btn btn-primary py-3 px-4" name="checkout" type="submit">Proceed to Checkout</button>
           </form>
         {% endif %}
