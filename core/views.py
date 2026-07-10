@@ -169,20 +169,20 @@ def cart_view(request):
         return redirect('login')
 
     if request.method == 'POST':
-        price_total = request.POST.get('price_total', 0)
-        request.session['total_price'] = price_total
+        request.session['delivery'] = request.POST.get('delivery', '0')
+        request.session['discount'] = request.POST.get('discount', '0')
         return redirect('checkout')
 
     cart_items = Cart.objects.filter(user_id=request.session['user_id'])
 
     subtotal = 0
     for item in cart_items:
-        item_total = float(item.price) * item.quantity
+        item_total = float(item.price.replace('.', '')) * item.quantity
         item.total_price = item_total
         subtotal += item_total
 
-    delivery = 5.00
-    discount = 3.00
+    delivery = float(request.session.get('delivery', '0'))
+    discount = float(request.session.get('discount', '0'))
     total = subtotal + delivery - discount
 
     return render(request, 'core/cart.html', {
@@ -201,9 +201,9 @@ def checkout(request):
     user_id = request.session['user_id']
     cart_items = Cart.objects.filter(user_id=user_id)
 
-    subtotal = sum(float(item.price) * item.quantity for item in cart_items)
-    delivery = 5.00
-    discount = 3.00
+    subtotal = sum(float(item.price.replace('.', '')) * item.quantity for item in cart_items)
+    delivery = float(request.session.get('delivery', '0'))
+    discount = float(request.session.get('discount', '0'))
     total = subtotal + delivery - discount
 
     if request.method == 'POST':

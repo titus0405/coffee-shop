@@ -54,13 +54,13 @@
                     <h3>{{ item.name }}</h3>
                     <p>{{ item.description }}</p>
                   </td>
-                  <td class="price">${{ item.price }}</td>
+                  <td class="price">Rp.{{ item.price }}</td>
                   <td>
                     <div class="input-group mb-3">
                       <input disabled type="text" name="quantity" class="quantity form-control input-number" value="{{ item.quantity }}" min="1" max="100">
                     </div>
                   </td>
-                  <td class="total">${{ item.total_price }}</td>
+                  <td class="total">Rp.{{ item.total_price }}</td>
                 </tr>
               {% empty %}
                 <tr>
@@ -78,29 +78,46 @@
           <h3>Cart Totals</h3>
           <p class="d-flex">
             <span>Subtotal</span>
-            <span>${{ subtotal|floatformat:2 }}</span>
+            <span>Rp.{{ subtotal|floatformat:2 }}</span>
           </p>
           <p class="d-flex">
             <span>Delivery</span>
-            <span>${{ delivery|floatformat:2 }}</span>
+            <span><input type="number" id="delivery-input" name="delivery" form="cart-form" class="form-control" style="width:120px;height:35px;padding:0 8px;" value="{{ delivery|floatformat:0 }}" min="0"></span>
           </p>
           <p class="d-flex">
             <span>Discount</span>
-            <span>${{ discount|floatformat:2 }}</span>
+            <span><input type="number" id="discount-input" name="discount" form="cart-form" class="form-control" style="width:120px;height:35px;padding:0 8px;" value="{{ discount|floatformat:0 }}" min="0"></span>
           </p>
           <hr>
           <p class="d-flex total-price">
             <span>Total</span>
-            <span>${{ total|floatformat:2 }}</span>
+            <span id="total-display">Rp.{{ total|floatformat:2 }}</span>
           </p>
         </div>
         {% if cart_items %}
-          <form action="{% url 'cart' %}" method="post">
+          <form id="cart-form" action="{% url 'cart' %}" method="post">
             {% csrf_token %}
-            <input hidden name="price_total" type="text" value="{{ total }}">
             <button class="btn btn-primary py-3 px-4" name="checkout" type="submit">Proceed to Checkout</button>
           </form>
         {% endif %}
+        <script>
+          (function() {
+            var subtotal = {{ subtotal }};
+            var deliveryInput = document.getElementById('delivery-input');
+            var discountInput = document.getElementById('discount-input');
+            var totalDisplay = document.getElementById('total-display');
+
+            function updateTotal() {
+              var delivery = parseFloat(deliveryInput.value) || 0;
+              var discount = parseFloat(discountInput.value) || 0;
+              var total = subtotal + delivery - discount;
+              totalDisplay.textContent = 'Rp.' + total.toLocaleString('id-ID', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            }
+
+            deliveryInput.addEventListener('input', updateTotal);
+            discountInput.addEventListener('input', updateTotal);
+          })();
+        </script>
       </div>
     </div>
   </div>

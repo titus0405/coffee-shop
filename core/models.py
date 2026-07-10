@@ -70,7 +70,7 @@ class Booking(models.Model):
     last_name = models.CharField(max_length=100)
     date = models.CharField(max_length=11)
     time = models.CharField(max_length=10)
-    phone = models.CharField(max_length=10)
+    phone = models.CharField(max_length=15)
     message = models.TextField()
     status = models.CharField(max_length=50, default='pending')
     user_id = models.IntegerField()
