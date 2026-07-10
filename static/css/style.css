@@ -9889,6 +9889,16 @@ h5,
   height: 750px;
   position: relative;
   z-index: 0;
+  overflow: hidden;
+}
+.owl-carousel.home-slider .slider-item .slider-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 @media (max-width: 1199.98px) {
   .owl-carousel.home-slider .slider-item {
